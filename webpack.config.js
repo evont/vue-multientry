@@ -11,6 +11,7 @@ module.exports = ({
     mode,
     output: {
       publicPath: publicPath,
+      filename: 'js/[name].js'
     },
     module: {
       rules: [

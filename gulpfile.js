@@ -60,7 +60,7 @@ gulp.task('prod', () => {
       .pipe(webpack(require('./webpack.config')({
         mode: 'production',
         rootPath: subjectRoot,
-        publicPath: `/subject/${newPath}`,
+        publicPath: `/subject/${newPath}/`,
         outputHTML: true
       })))
       .pipe(gulp.dest(`./dist/subject/${newPath}`));
@@ -76,15 +76,16 @@ gulp.task('prod', () => {
     const newPath = getZtPath(event.path);
     const pathSplit = event.path.split('/');
     const subjectRoot = pathSplit.slice(0, pathSplit.indexOf('subject') + 2).join('/');
+    console.log(newPath);
     return gulp.src(event.path)
       .pipe(named())
       .pipe(webpack(require('./webpack.config')({
         mode: 'production',
         rootPath: subjectRoot,
-        publicPath: `/subject/${newPath}`,
+        publicPath: `/subject/${newPath.split('/')[0]}/`,
         outputHTML: true
       })))
-      .pipe(gulp.dest(`./dist/subject/${newPath}`));
+      .pipe(gulp.dest(`./dist/subject/${newPath.split('/')[0]}`));
   });
   gulp.watch('./src/subject/*/css/*.css', (event) => {
     const newPath = getZtPath(event.path, '/css');
