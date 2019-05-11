@@ -13,3 +13,16 @@ export default {
   }
 }
 </script>
+
+
+<style lang="scss" scoped>
+    .home {
+      display: flex;
+      padding: 20px;
+      background: #eee;
+      align-items: center;
+      p {
+        color: #999;
+      }
+    }
+</style>

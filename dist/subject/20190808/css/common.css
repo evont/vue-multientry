@@ -1,0 +1,29 @@
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+}
+.holder {
+  padding: 2.857143rem 0;
+  text-align: center;
+  color: #aaa;
+}
+ul {
+  list-style: none;
+}
+.home[data-v-1311bcfc] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.428571rem;
+  background: #eee;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.home p[data-v-1311bcfc] {
+  color: #999;
+}
