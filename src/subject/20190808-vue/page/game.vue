@@ -3,7 +3,7 @@
     game
     <p>fsaf</p>
   </div>
-</template>
+</template> 
 
 <script>
 export default {
